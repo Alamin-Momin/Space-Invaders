@@ -98,9 +98,9 @@ void PortC_Init(void){
 	SYSCTL_RCGCGPIO_R |=  0x04;		// enable port C clock
 	int32_t delay=SYSCTL_RCGCGPIO_R; //delay
 	delay=SYSCTL_RCGCGPIO_R; 			// delay											
-	GPIO_PORTC_DIR_R &= ~0x06;		// set PC1 - PC2 as  input
-	GPIO_PORTC_AFSEL_R &= ~0x06;	// disable alternate function for PC1-PC2
-	GPIO_PORTC_DEN_R |= 0x06;		// enable GPIO for PC1-PC2
+	GPIO_PORTC_DIR_R &= ~0x0030;		// set PC4 - PC5 as  input
+	GPIO_PORTC_AFSEL_R &= ~0x0030;	// disable alternate function for PC4-PC5
+	GPIO_PORTC_DEN_R |= 0x0030;		// enable GPIO for PC4-PC5
 }
 
 
